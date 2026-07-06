@@ -797,7 +797,7 @@ const TARGETS = {
   "客訴次數":           {t:0,      u:"次",  d:"low",  dept:"QA",       freq:"月", cat:"品質目標", label:"=0次"},
   "製程穩定度 Cpk":      {t:1.00,   u:"",    d:"high", dept:"QA",       freq:"月", cat:"品質目標", label:"≧1.00"},
   "安全規範評比得分":   {t:95,    u:"分",  d:"high", dept:"安全委員會", freq:"月", cat:"管理目標", label:"≧95分"},
-  "5S評比得分":         {t:95,    u:"分",  d:"high", dept:"5S委員會",  freq:"月", cat:"管理目標", label:"≧95分"},
+  "5S 評比得分":         {t:95,    u:"分",  d:"high", dept:"5S委員會",  freq:"月", cat:"管理目標", label:"≧95分"},
   "安全5S提案件數":     {t:1,      u:"件",  d:"high", dept:"5S/安全委員會",       freq:"季", cat:"管理目標", label:"≧1件"},
   "人力需求狀況":       {t:3,      u:"人",  d:"low",  dept:"AD",       freq:"月", cat:"管理目標", label:"≦3人差異"},
   "製造成本":           {t:0,  u:"元",  d:"low",  dept:"FD",       freq:"月", cat:"管理目標", label:"≦0"},
@@ -829,7 +829,7 @@ let ACTUALS = {
   "客訴次數":           2,
   "製程穩定度 Cpk":      1.344,
   "安全規範評比得分":   0,
-  "5S評比得分":         0,
+  "5S 評比得分":         0,
   "安全5S提案件數":     0,
   "人力需求狀況":       0,
   "製造成本":           0,
@@ -1266,7 +1266,7 @@ function renderManagement(){
   //{name:"全廠稼動率",id:"g-util"},
   const sg = [
     {name:"安全規範評比得分",id:"g-safe"},
-    {name:"5S評比得分",id:"g-5s"},
+    {name:"5S 評比得分",id:"g-5s"},
   ];
   document.getElementById("safety-gauges").innerHTML = sg.map(g=>{
     const a=ACTUALS[g.name], s=getStatus(g.name);
